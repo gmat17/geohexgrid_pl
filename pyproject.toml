@@ -1,0 +1,68 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "geohexgrid_pl"
+version = "3.0.3"
+description = "A Python library for making geographic flat-top hexagon grids like QGIS's create grid function"
+readme = "README.rst"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+  { name = "Alexander Raichev", email = "alexander@raichev.net" },
+]
+keywords = ["geospatial", "geopandas", "hexagon", "grid", "gis"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Scientific/Engineering :: GIS",
+]
+dependencies = [
+  "numpy",
+  "shapely",
+]
+
+[dependency-groups]
+dev = [
+  "marimo>=0.13.15",
+  "matplotlib>=3.8.1",
+  "pre-commit-uv>=0.1",
+  "pytest>=7.1.2",
+  "ruff>=0.1.3",
+]
+
+[project.urls]
+Homepage = "https://codeberg.org/araichev/geohexgrid"
+Repository = "https://codeberg.org/araichev/geohexgrid"
+Issues = "https://codeberg.org/araichev/geohexgrid/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["geohexgrid_pl"]
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/notebooks",
+  "/nz_10000m.png",
+  "/uv.lock",
+  "/dist",
+  "/__marimo__",
+  "/.woodpecker",
+  "/.pre-commit-config.yaml",
+]
+
+
+[tool.ruff]
+line-length = 90
+exclude = ["notebooks/*.py"]
+
+[tool.ruff.lint]
+select = ["E", "F"]
+ignore = ["E501", "F401", "F403"]
