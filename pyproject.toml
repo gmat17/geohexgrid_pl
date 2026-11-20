@@ -11,6 +11,7 @@ requires-python = ">=3.10"
 license = "MIT"
 authors = [
   { name = "Alexander Raichev", email = "alexander@raichev.net" },
+  { name = "Gabor Matay-Csepeli"},
 ]
 keywords = ["geospatial", "geopandas", "hexagon", "grid", "gis"]
 classifiers = [
@@ -40,9 +41,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://codeberg.org/araichev/geohexgrid"
-Repository = "https://codeberg.org/araichev/geohexgrid"
-Issues = "https://codeberg.org/araichev/geohexgrid/issues"
+Homepage = "https://github.com/gmat17/geohexgrid_pl"
+Repository = "https://github.com/gmat17/geohexgrid_pl"
+Issues = "https://github.com/gmat17/geohexgrid_pl/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["geohexgrid_pl"]

@@ -1,10 +1,8 @@
-Geohexgrid
-**********
-Tests: |ci-badge|
+geohexgrid_pl
+*************
 
-.. |ci-badge| image:: https://ci.codeberg.org/api/badges/araichev/geohexgrid/status.svg?branch=master
-   :target: https://ci.codeberg.org/repos/araichev/geohexgrid
-   :alt: pipeline status
+A polars / polars-st port of `geohexgrid <https://codeberg.org/araichev/geohexgrid>`_
+by Alexander Raichev. Not affiliated with or endorsed by the original author.
 
 A tiny Python 3.10+ library for making geographic flat-top hexagonal grids like QGIS's `create grid function <https://docs.qgis.org/3.22/en/docs/user_manual/processing_algs/qgis/vectorcreation.html?highlight=create%20grid#create-grid>`_.
 That's it.
